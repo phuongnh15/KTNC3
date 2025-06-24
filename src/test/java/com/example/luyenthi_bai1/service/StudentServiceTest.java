@@ -63,6 +63,17 @@ class StudentServiceTest {
     }
 
     @Test
+    void updateStudent1() {
+        Student student = new Student(2,"Hai",25,8.0f);
+        studentService.addStudent(student);
+
+        student.setName("An");
+        studentService.updateStudent(student);
+
+        assertEquals("An",studentService.getOneStudent(2).getName());
+    }
+
+    @Test
     void getAll() {
     }
 }
