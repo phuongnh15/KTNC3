@@ -53,6 +53,13 @@ class StudentServiceTest {
 
     @Test
     void updateStudent() {
+        Student student = new Student(2,"Hai",25,8.0f);
+        studentService.addStudent(student);
+
+        student.setAge(30);
+        studentService.updateStudent(student);
+
+        assertEquals(30,studentService.getOneStudent(2).getAge());
     }
 
     @Test

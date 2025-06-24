@@ -36,9 +36,10 @@ public class StudentService {
 
     public void updateStudent(Student student){
         for (int i = 0;i<studentList.size();i++){
-            if(studentList.get(i).getId()==i){
+            if(studentList.get(i).getId()==student.getId()){
                 studentList.set(i,student);
-            }else {
+            }
+            else {
                 throw new IllegalArgumentException("Khong update duoc");
             }
         }
